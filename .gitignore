@@ -10,3 +10,4 @@ review/
 state/
 *.log
 .DS_Store
+.dev/
