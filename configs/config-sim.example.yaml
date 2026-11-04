@@ -1,0 +1,15 @@
+arm:
+  type: yam
+  mode: sim
+gripper:
+  type: yam
+  mode: sim
+camera:
+  type: yam
+  source: synthetic
+policy:
+  url: http://127.0.0.1:9010/v1
+  token_file: ~/.config/roboapi-yam/token
+  model: stub-vla
+runtime:
+  inter_chunk_pause_s: 0.5

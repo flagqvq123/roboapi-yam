@@ -1,0 +1,8 @@
+# 任务清单：先用 --task 选择，name 与 instruction 都可以随时改
+tasks:
+  - name: stack_blocks
+    instruction: "Stack the two blocks together."
+  - name: pour_water
+    instruction: "把杯子里的水倒进旁边的碗里"
+  - name: stack_cups
+    instruction: "Stack one cup on top of another"

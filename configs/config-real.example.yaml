@@ -1,0 +1,36 @@
+arm:
+  type: yam
+  mode: real
+  channel: can_follower_l          # 左臂（当前使用）
+  arm_type: yam_pro
+  gripper_type: linear_4310        # 上机时按实际夹爪核对（错了要在标定前改）
+  control_hz: 100.0
+  max_joint_speed: 2.0
+  cartesian_speed: 0.05
+gripper:
+  type: yam
+  mode: real
+  channel: can_follower_l
+  arm_type: yam_pro
+  gripper_type: linear_4310
+  full_travel_s: 1.0
+  # 取自他们生产配置 yam_right.yaml 的 gripper_limits_override（右臂实测），
+  # 用来跳过 i2rt 的夹爪行程标定。换左臂或换夹爪时必须重新确认。
+camera:
+  type: yam
+  source: realsense
+  serial: '262422271903'          # 左腕 D405（262422270050 是俯视主视角，2588 是右腕已拔）
+  width: 1280
+  height: 720
+  fps: 30
+policy:
+  type: openai
+  url: https://api.pokebot.com/v1
+  model: poke-aurora-preview
+  use_env_proxy: false
+  token_file: ~/.config/roboapi-yam/token
+  timeout_s: 30.0
+runtime:
+  inter_chunk_pause_s: 0.5
+web:
+  port: 8080

@@ -1,0 +1,23 @@
+[project]
+name = "roboapi-yam"
+version = "0.1.0"
+description = "yam component adapters for RoboAPI"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = ["roboapi>=0.4.5,<0.5"]
+
+[project.entry-points."roboapi.arms"]
+yam = "roboapi_yam.arm:arm_plugin"
+
+[project.entry-points."roboapi.grippers"]
+yam = "roboapi_yam.gripper:gripper_plugin"
+
+[project.entry-points."roboapi.cameras"]
+yam = "roboapi_yam.camera:camera_plugin"
+
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
