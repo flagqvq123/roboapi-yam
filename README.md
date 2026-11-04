@@ -23,8 +23,10 @@ RoboAPI 0.4.5 的 YAM（YAM Pro）硬件适配器：把机械臂、平行夹爪�
 uv pip install 'roboapi==0.4.5'
 uv pip install -e /path/to/i2rt
 
-# 2) 装本适配器
-uv pip install dist/roboapi_yam-0.1.0-py3-none-any.whl
+# 2) 装本适配器（从 Release 下载 wheel）
+uv pip install https://github.com/flagqvq123/roboapi-yam/releases/download/v0.1.0/roboapi_yam-0.1.0-py3-none-any.whl
+#    或使用仓库内的构建产物：
+#    uv pip install ./dist/roboapi_yam-0.1.0-py3-none-any.whl
 
 # 3) 配置（改 channel / camera.serial / policy）
 cp configs/config-real.example.yaml ~/roboapi-config.yaml
