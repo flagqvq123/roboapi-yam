@@ -52,4 +52,5 @@ roboapi http -c ~/roboapi-config.yaml      # http://127.0.0.1:8080/
 
 ## 许可
 
-未指定许可证；如需公开分发请先补充 LICENSE。
+本项目使用 [PolyForm Noncommercial License 1.0.0](LICENSE)：允许非商业用途的使用、修改与分发，
+商业用途需另行获得许可。
